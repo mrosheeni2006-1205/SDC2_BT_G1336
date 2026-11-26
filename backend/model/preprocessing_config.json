@@ -1,0 +1,25 @@
+{
+  "age_scaler": {
+    "mean": 54.23678161,
+    "scale": 15.43459404
+  },
+  "sex_mapping": {
+    "M": 0.0,
+    "F": 1.0
+  },
+  "mri_modalities": [
+    "T1",
+    "T1ce",
+    "T2",
+    "FLAIR"
+  ],
+  "target_shape": [
+    128,
+    128,
+    96
+  ],
+  "class_mapping": {
+    "0": "IDH Wild Type",
+    "1": "IDH Mutated"
+  }
+}

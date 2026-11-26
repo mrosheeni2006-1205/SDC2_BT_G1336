@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: neuroinsight_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/model/best_multimodal_cnn_vit_idh.pth
+      - MAX_UPLOAD_SIZE_MB=100
+      - ENVIRONMENT=production
+    volumes:
+      - ./backend/model:/app/model
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: neuroinsight_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

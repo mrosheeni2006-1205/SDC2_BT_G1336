@@ -1,0 +1,50 @@
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# MRI datasets and patient data
+datasets/
+data/
+preprocessed_cache/
+model_splits/
+*.nii
+*.nii.gz
+*.npy
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.log
+.DS_Store
+
+# IDE
+.idea/
+
+# Project reports and backup archives
+*.docx
+*.zip
+backup_pre_xai/
+
+# Temporary and generated files
+*.timestamp-*.mjs
+backend/temp_uploads/
